@@ -6,6 +6,7 @@ from pages.home_page import HomePage
 @pytest.mark.usefixtures("setup_teardown")
 @pytest.mark.login_invalido
 @pytest.mark.regressivo
+@pytest.mark.erro
 
 class TestSEI:
     def test_login_invalido(self):
