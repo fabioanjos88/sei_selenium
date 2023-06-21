@@ -12,5 +12,6 @@ class TestSEI:
     def test_login(self):
         login_page = LoginPage()
         home_page = HomePage()
+        
         login_page.fazer_login()
         home_page.aguardar_titulo()

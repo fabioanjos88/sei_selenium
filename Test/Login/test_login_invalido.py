@@ -12,4 +12,4 @@ class TestSEI:
     def test_login_invalido(self):
         login_page = LoginPage()
         login_page.fazer_login_invalido()
-        login_page.accept_alert()
+        login_page.aceitar_alerta()

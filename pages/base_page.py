@@ -24,13 +24,13 @@ class BasePage:
         self.encontrar_elemento(locator).click()
     
     def verificar_se_elemento_existe(self, locator):
-        assert self.encontrar_elemento(locator).is_displayed(), "Não localizado!"
+        assert self.encontrar_elemento(locator).is_displayed(), "Elemento não localizado!"
     
     def dropdown(self, locator, text):
         dropdown = Select(self.encontrar_elemento(locator))
         dropdown.select_by_visible_text(text)
     
-    def accept_alert(self):
+    def aceitar_alerta(self):
         wait = WebDriverWait(self.driver, 7)
         wait.until(EC.alert_is_present())
         alerta = self.driver.switch_to.alert
