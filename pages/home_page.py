@@ -12,13 +12,13 @@ class HomePage(BasePage):
     def confirmacao_login(self):
         self.verificar_se_elemento_existe(self.title_controle_de_processo)
 
-    def aguardar_titulo(self):
-        self.aguardar_elemento(self.title_controle_de_processo)
+    def aguardar_carregar_titulo(self):
+        self.aguardar_elemento_visivel(self.title_controle_de_processo)
         
     def confirmar_titulo(self):
         texto_titulo = self.encontrar_elemento(self.title_controle_de_processo).text
         assert texto_titulo == "Controle de Processos"
 
     def clicar_inciar_processo(self):
-        self.aguardar_elemento(self.btn_iniciar_processo)
+        self.aguardar_elemento_visivel(self.btn_iniciar_processo)
         self.clicar(self.btn_iniciar_processo)

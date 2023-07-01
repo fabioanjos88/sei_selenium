@@ -1,0 +1,6 @@
+
+
+pytest -m CTO2
+
+Rodar com Report:
+pytest --html=report.html

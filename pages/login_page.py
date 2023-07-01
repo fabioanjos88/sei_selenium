@@ -21,12 +21,13 @@ class LoginPage(BasePage):
     def fazer_login(self):     
         self.escrever(self.field_username, self.usuario)
         self.escrever(self.field_password, self.senha)
-        self.dropdown(self.dropdwon_orgao, self.orgao_padrao)
+        self.dropdown_texto(self.dropdwon_orgao, self.orgao_padrao)
         self.clicar(self.btn_acessar)
+        
     
     def fazer_login_invalido(self):
         self.verificar_se_elemento_existe(self.logo_sei_login)
         self.escrever(self.field_username, self.usuario)
         self.escrever(self.field_password, self.senha_errada)
-        self.dropdown(self.dropdwon_orgao, self.orgao_padrao)
+        self.dropdown_texto(self.dropdwon_orgao, self.orgao_padrao)
         self.clicar(self.btn_acessar)
