@@ -15,4 +15,4 @@ class TestSEI:
         home_page = HomePage()
         
         login_page.fazer_login()
-        home_page.aguardar_titulo()
+        home_page.aguardar_carregar_titulo()

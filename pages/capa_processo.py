@@ -15,7 +15,7 @@ class CapaProcesso(BasePage):
         self.field_observacoes = (By.ID, "txaObservacoes")
         self.radio_publico = (By.ID, "divOptPublico")
         self.btn_salvar = (By.ID, "btnSalvar")
-        self.iframe_informocoes_processo = ("ifrArvore")
+        self.iframe_informacoes_processo = ("ifrArvore")
         self.numero_processo = (By.ID, "header")
 
     def aguardar_carregar_tela_capa_processo(self):
@@ -31,10 +31,10 @@ class CapaProcesso(BasePage):
         self.escrever(self.field_observacoes, f"(OBSERVAÇÕES) Teste {self.data_atual.date()}")
         self.clicar(self.radio_publico)
         self.clicar(self.btn_salvar)
-        self.selecionar_iframe(self.iframe_informocoes_processo)
+        self.selecionar_iframe(self.iframe_informacoes_processo)
         numero_do_processo = self.encontrar_elemento(self.numero_processo).text
         print(numero_do_processo)
-        self.sair_frame()
+        self.ir_para_iframe_principal()
 
 
 

@@ -9,8 +9,8 @@ class HomePage(BasePage):
         self.title_controle_de_processo = (By.ID, "divInfraBarraLocalizacao")  
         self.btn_iniciar_processo = (By.XPATH, "//span[contains(.,'Iniciar Processo')]")
 
-    def confirmacao_login(self):
-        self.verificar_se_elemento_existe(self.title_controle_de_processo)
+    # def confirmacao_login(self):
+    #     self.verificar_se_elemento_existe(self.title_controle_de_processo)
 
     def aguardar_carregar_titulo(self):
         self.aguardar_elemento_visivel(self.title_controle_de_processo)

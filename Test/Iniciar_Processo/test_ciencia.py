@@ -1,9 +1,5 @@
 import pytest
 import time
-from pages.login_page import LoginPage
-from pages.base_page import BasePage
-from pages.home_page import HomePage
-from pages.capa_processo import CapaProcesso
 from pages.tela_processo import TelaProcesso
 from pages.ciencia import Ciencia
 from Test.Iniciar_Processo.criar_processo import CriarProcesso
@@ -19,8 +15,9 @@ class TestSEI:
     def test_ciencia(self):
         tela_processo = TelaProcesso()
         criar_processo = CriarProcesso()
+        ciencia = Ciencia()
 
         criar_processo.criar_processo()
         tela_processo.aguardar_icones_tela_processo()
         tela_processo.clicar_ciencia()
-
+        ciencia.confirmar_ciencia()

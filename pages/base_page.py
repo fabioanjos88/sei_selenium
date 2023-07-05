@@ -11,7 +11,6 @@ from selenium.webdriver.support.select import Select
 class BasePage:
     def __init__(self):
         self.driver = conftest.driver
-        
 
     def encontrar_elemento(self, locator):
         return self.driver.find_element(*locator)
@@ -45,5 +44,11 @@ class BasePage:
     def selecionar_iframe(self, locator):
         self.driver.switch_to.frame(locator)
 
-    def sair_frame(self):
+    def ir_para_iframe_principal(self):
         self.driver.switch_to.default_content()
+
+    def comparar_texto(self, variable, text_expected):
+        assert(variable, text_expected)
+
+    def coletar_texto(self, locator):
+        self.encontrar_elemento(locator).text

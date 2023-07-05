@@ -1,3 +1,4 @@
+import time
 from selenium.webdriver.common.by import By
 import conftest
 from pages.base_page import BasePage
@@ -10,7 +11,7 @@ class TelaProcesso(BasePage):
         self.driver = conftest.driver
         self.data_atual = datetime.now()
         self.iframe_icones = ("ifrVisualizacao")
-        self.arvore_acoes = (By.ID, "divArvoreAcoes")
+        self.arvore_acoes = (By.ID,"divArvoreAcoes")
         self.btn_ciencia = (By.XPATH, "//img[contains(@alt,'Ciência')]")
 
     def aguardar_icones_tela_processo(self):
@@ -19,3 +20,5 @@ class TelaProcesso(BasePage):
     
     def clicar_ciencia(self):
         self.clicar(self.btn_ciencia)
+
+

@@ -8,13 +8,9 @@ from pages.capa_processo import CapaProcesso
 
 
 @pytest.mark.usefixtures("setup_teardown")
-@pytest.mark.iniciar_processo
-@pytest.mark.CT02
-@pytest.mark.regressivo
 
 class CriarProcesso:
     def criar_processo(self):
-    # def test_criar_processo(self):
         login_page = LoginPage()
         home_page = HomePage()
         criar_processo = IniciandoProcesso()

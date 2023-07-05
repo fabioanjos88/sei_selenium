@@ -4,3 +4,5 @@ pytest -m CTO2
 
 Rodar com Report:
 pytest --html=report.html
+
+self.driver.get_screenshot_as_file("C:/Users/fsanjos/sei_selenium/Test/capture.png")
